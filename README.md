@@ -12,14 +12,17 @@
 > fixed-size cutter manages 50%.** Same document, same retriever, same everything
 > except the split: `python -m chunklab.eval`.
 
-Everyone tunes the embedding model. Everyone argues about rerankers. And almost
-nobody measures the decision that quietly caps all of it: how you chop the
-document into chunks in the first place.
+Everyone tunes the embedding model. Everyone argues about rerankers on a
+podcast. And almost nobody measures the decision that quietly caps all of it:
+how you chop the document into chunks in the first place, usually decided in
+thirty seconds by whatever number felt right at the time.
 
 Cut on a fixed character count and you will slice clean through the middle of
-the sentence that held the answer. Now the retriever finds a chunk that is
-"near" the answer, your model reads half a fact, and it confidently makes up the
-other half. The chunk boundary, not the embedding, is what broke you.
+the sentence that held the answer, no ceremony, no warning. Now the retriever
+finds a chunk that's "near" the answer, your model reads half a fact, and it
+confidently makes up the other half like it was always going to say that. The
+chunk boundary, not the embedding, is what broke you, and nobody's going to
+tell you that in the incident review.
 
 chunklab puts the common chunking strategies side by side on a retrieval task
 where the answer spans are known exactly, and measures the only thing that
