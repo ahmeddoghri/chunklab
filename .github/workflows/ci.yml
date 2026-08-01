@@ -28,3 +28,5 @@ jobs:
         run: python examples/quickstart.py
       - name: Run benchmark
         run: python -m chunklab.eval
+      - name: Run second-document generalization check
+        run: python -m chunklab.eval_v2
