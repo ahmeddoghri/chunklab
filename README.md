@@ -2,7 +2,6 @@
 
 **Your RAG is only as good as how you cut up the documents. Most people pick a chunk size by vibes.**
 
-![CI](https://github.com/ahmeddoghri/chunklab/actions/workflows/ci.yml/badge.svg)
 ![tests](https://img.shields.io/badge/tests-18%20passing-brightgreen)
 ![python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![deps](https://img.shields.io/badge/runtime%20deps-none-success)
