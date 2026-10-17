@@ -2,10 +2,13 @@
 
 **Your RAG is only as good as how you cut up the documents. Most people pick a chunk size by vibes.**
 
-![tests](https://img.shields.io/badge/tests-18%20passing-brightgreen)
+[![tests](https://github.com/ahmeddoghri/chunklab/actions/workflows/tests.yml/badge.svg)](https://github.com/ahmeddoghri/chunklab/actions/workflows/tests.yml)
 ![python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![deps](https://img.shields.io/badge/runtime%20deps-none-success)
 ![license](https://img.shields.io/badge/license-MIT-black)
+[![case study](https://img.shields.io/badge/case%20study-adoghri.com-e0703e)](https://adoghri.com/project-18.html)
+
+![chunklab](docs/cover.jpg)
 
 > **Structure-aware chunking retrieves the whole answer 80% of the time. A naive
 > fixed-size cutter manages 50%.** Same document, same retriever, same everything
