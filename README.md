@@ -1,4 +1,4 @@
-# 📐 chunklab
+# chunklab
 
 **Your RAG is only as good as how you cut up the documents. Most people pick a chunk size by vibes.**
 
@@ -130,14 +130,14 @@ second_document / retriever_v2         50%         50%         70%         60%
 
 Two things worth knowing before you trust the headline number on your own
 data. First, the 30-point structure-aware margin nearly vanishes on the
-second document; fixed-size cutting is only 10-20 points behind here, not
-30. Second, which structure-aware strategy even wins flips depending on a
+second document; fixed-size cutting is only 10-20 points behind the two
+structure-aware strategies here, not 30. Second, which structure-aware strategy even wins flips depending on a
 bug in the retriever: `eval._score` has no stopword list at all, so "a",
 "how", "does" count as matches with the same weight as a real content
 word. On the bundled document this is completely harmless, stopword
 filtering (`chunklab/retriever_v2.py`) changes zero outcomes there. On the
 second document it changes which strategy wins outright (recursive moves
-from 6/10 worst to 7/10 best). The same latent bug is inert on one corpus
+from 6/10, behind both overlap and sentence, to 7/10, ahead of all three). The same latent bug is inert on one corpus
 and decisive on another, which is exactly the kind of thing "measure your
 own" is supposed to catch and this repo hadn't, until now. `chunkers.py`/
 `eval.py` are untouched, so the bundled-document numbers above still
